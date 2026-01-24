@@ -67,7 +67,7 @@ export default function About() {
 
           {/* Action Buttons */}
           <div className="mt-10 flex gap-4">
-            <a href="https://ashwathskulalportfolio.vercel.app/public//Resumes (Ashwath S).pdf" download="RESUME_Ashwath_S.pdf">
+            <a href="https://ashwathskulalportfolio.vercel.app//pdfs/Resumes (Ashwath S).pdf" download="RESUME_Ashwath_S.pdf">
             <button className="bg-yellow-500 text-black px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-yellow-400 transition-colors cursor-pointer">
               Download CV
             </button>
