@@ -14,8 +14,6 @@ export default function Contact() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-        {/* Left Column: Contact Details */}
         <div className="lg:col-span-1 space-y-4">
           <ContactInfoCard
             icon={<FaMapMarkerAlt size={18} />}
@@ -37,7 +35,6 @@ export default function Contact() {
           />
 
           <div className="h-48 w-full bg-[#24242f] border border-gray-800 rounded-sm overflow-hidden transition-all duration-500 relative group">
-            {/* The Map iframe */}
             <iframe
               title="Location Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29485.619156297747!2d74.67282749693322!3d13.623610402299958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbc8e067b158c71%3A0x3b3eb31736debdcb!2sKundapura%2C%20Karnataka!5e1!3m2!1sen!2sin!4v1769181145846!5m2!1sen!2sin"
