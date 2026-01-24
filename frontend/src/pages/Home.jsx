@@ -5,7 +5,7 @@ import About from '../HomePages/About';
 import Skills from '../HomePages/Skills';
 import Projects from '../pages/Project';
 import Contact from '../HomePages/Contact';
-import ProfileImg from "../Images/profilepicture1.jpg";
+import ProfileImg from "../Images/profilepicture1.jpeg";
 import ProfilePicture from "../Images/pto.png";
 import {
   FaGithub,
