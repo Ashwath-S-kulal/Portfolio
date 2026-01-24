@@ -7,10 +7,11 @@ import {
   FaImage,
   FaBriefcase,
   FaEnvelope,
-  FaInstagram,
+  FaGraduationCap,
+  FaUserGraduate,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { GraduationCap, Menu, X } from "lucide-react";
+import {  Menu, X } from "lucide-react";
 import ProfileImage from "../Images/profilepicture1.jpeg";
 
 export default function NavBar() {
@@ -49,7 +50,7 @@ export default function NavBar() {
             <NavLink href="#about" icon={<FaUser />} label="About" />
             <NavLink href="#skills" icon={<FaImage />} label="Skills" />
             <NavLink href="#projects" icon={<FaBriefcase />} label="Projects" />
-            <NavLink href="#education" icon={<GraduationCap />} label="Education" />
+            <NavLink href="#education" icon={<FaUserGraduate />} label="Education" />
             <NavLink href="#contact" icon={<FaEnvelope />} label="Contact" />
           </nav>
 
@@ -74,7 +75,7 @@ export default function NavBar() {
       {/* Mobile Menu Dropdown */}
       <div 
         className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden bg-[#24242f] border-b border-gray-800 ${
-          isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isOpen ? 'opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
         <div className="px-4 pt-2 pb-6 space-y-2">
@@ -82,7 +83,7 @@ export default function NavBar() {
           <MobileNavLink href="#about" icon={<FaUser />} label="About" onClick={() => setIsOpen(false)} />
           <MobileNavLink href="#skills" icon={<FaImage />} label="Skills" onClick={() => setIsOpen(false)} />
           <MobileNavLink href="#projects" icon={<FaBriefcase />} label="Projects" onClick={() => setIsOpen(false)} />
-          <MobileNavLink href="#education" icon={<GraduationCap />} label="Education" onClick={() => setIsOpen(false)} />
+          <MobileNavLink href="#education" icon={<FaUserGraduate />} label="Education" onClick={() => setIsOpen(false)} />
           <MobileNavLink href="#contact" icon={<FaEnvelope />} label="Contact" onClick={() => setIsOpen(false)} />
 
           <div className="flex justify-center gap-8 pt-6 border-t border-gray-800 mt-4">
@@ -95,8 +96,6 @@ export default function NavBar() {
     </header>
   );
 }
-
-/* --- Helper Components --- */
 
 const NavLink = ({ href, icon, label }) => (
   <a href={href} className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-gray-400 hover:text-yellow-500 transition-all duration-300">
