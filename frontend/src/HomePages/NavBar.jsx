@@ -10,8 +10,8 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { Menu, X } from "lucide-react";
-import ProfileImage from "../Images/profilepicture1.jpg";
+import { GraduationCap, Menu, X } from "lucide-react";
+import ProfileImage from "../Images/profilepicture1.jpeg";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,6 +49,7 @@ export default function NavBar() {
             <NavLink href="#about" icon={<FaUser />} label="About" />
             <NavLink href="#skills" icon={<FaImage />} label="Skills" />
             <NavLink href="#projects" icon={<FaBriefcase />} label="Projects" />
+            <NavLink href="#education" icon={<GraduationCap />} label="Education" />
             <NavLink href="#contact" icon={<FaEnvelope />} label="Contact" />
           </nav>
 
@@ -81,6 +82,7 @@ export default function NavBar() {
           <MobileNavLink href="#about" icon={<FaUser />} label="About" onClick={() => setIsOpen(false)} />
           <MobileNavLink href="#skills" icon={<FaImage />} label="Skills" onClick={() => setIsOpen(false)} />
           <MobileNavLink href="#projects" icon={<FaBriefcase />} label="Projects" onClick={() => setIsOpen(false)} />
+          <MobileNavLink href="#education" icon={<GraduationCap />} label="Education" onClick={() => setIsOpen(false)} />
           <MobileNavLink href="#contact" icon={<FaEnvelope />} label="Contact" onClick={() => setIsOpen(false)} />
 
           <div className="flex justify-center gap-8 pt-6 border-t border-gray-800 mt-4">

@@ -22,6 +22,7 @@ import {
 import { FaXTwitter } from "react-icons/fa6";
 import Footer from '../HomePages/Footer';
 import { NavLink } from 'react-router-dom';
+import Education from '../HomePages/Education';
 
 const PortfolioDashboard = () => {
 
@@ -138,7 +139,7 @@ const PortfolioDashboard = () => {
 
           {/* Social Links Section */}
           <section className="mx-2 md:mx-5 mb-10">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
               <SocialLink icon={<FaGithub />} label="GitHub" link="https://github.com/Ashwath-S-kulal" hoverColor="hover:text-white hover:bg-gray-700" />
               <SocialLink icon={<FaLinkedinIn />} label="LinkedIn" link="https://www.linkedin.com/in/ashwath-s-56a5b2334/" hoverColor="hover:text-white hover:bg-blue-600" />
               <SocialLink icon={<FaXTwitter />} label="Twitter" link="https://x.com/Ashwath52870943" hoverColor="hover:text-white hover:bg-black" />
@@ -185,6 +186,7 @@ const PortfolioDashboard = () => {
         <About />
         <Skills />
         <Projects />
+        <Education />
         <Contact />
         <Footer/>
       </div>
@@ -192,7 +194,6 @@ const PortfolioDashboard = () => {
   );
 };
 
-/* --- Helper Components --- */
 
 const CircularSkill = ({ label, percent }) => (
   <div className="flex flex-col items-center">
