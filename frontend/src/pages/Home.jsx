@@ -36,7 +36,7 @@ const PortfolioDashboard = () => {
     {
       title: "Health Care",
       desc: "Patient management and portal system.",
-      link: "https://health-bridge-medical-website-wgbm.vercel.app/",
+      link: "https://health-bridge-medical-website.vercel.app/",
       icon: <FaHeartbeat />,
     },
     {

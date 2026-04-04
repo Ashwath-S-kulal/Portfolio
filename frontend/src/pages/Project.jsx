@@ -47,7 +47,7 @@ export default function Project() {
         "Expertise Doctor Consultant",
         "Responsive Admin Panel"
       ],
-      link: "https://health-bridge-medical-website-wgbm.vercel.app/",
+      link: "https://health-bridge-medical-website.vercel.app/",
       GitLink: "https://github.com/Ashwath-S-kulal/Health-Bridge-Medical-Website",
       icon: <HeartPulse size={18} />
     }
