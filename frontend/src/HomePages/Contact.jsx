@@ -4,13 +4,11 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaCode, FaPaintBrush, FaMobileA
 export default function Contact() {
   return (
     <section id="contact" className="bg-[#1e1e28] px-8 py-16 pt-1 scroll-mt-24 my-10 rounded-lg shadow-2xl">
-      {/* Header */}
       <div className="mb-12">
         <h2 className="text-3xl font-bold text-white mb-4 relative inline-block">
           Contact & Services
           <span className="absolute -bottom-2 left-0 w-12 h-1 bg-yellow-500"></span>
         </h2>
-        
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -18,7 +16,7 @@ export default function Contact() {
           <ContactInfoCard
             icon={<FaMapMarkerAlt size={18} />}
             title="Location"
-            detail="Udupi, Karnataka"
+            detail="Kundapura, Karnataka"
             subDetail="Available for Remote Work"
           />
           <ContactInfoCard
@@ -44,7 +42,6 @@ export default function Contact() {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
 
-            {/* Technical Overlay Label */}
             <div className="absolute top-2 right-2 pointer-events-none">
               <span className="text-[9px] bg-black/60 text-yellow-500 px-2 py-1 font-mono uppercase tracking-widest backdrop-blur-sm border border-white/5">
                 Loc: 13.34 N, 74.74 E
@@ -53,7 +50,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Right Column: Services Grid (Replaces the Form) */}
         <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
           <ServiceCard
             icon={<FaCode />}
@@ -76,7 +72,6 @@ export default function Contact() {
             desc="Implementing secure login and access control systems."
           />
 
-          {/* Quick Connect CTA */}
           <div className="md:col-span-2 mt-2 bg-yellow-500 p-6 rounded-sm flex flex-col md:flex-row justify-between items-center">
             <div>
               <h4 className="text-black font-bold uppercase tracking-widest text-sm">Ready to start a project?</h4>
@@ -95,7 +90,6 @@ export default function Contact() {
   );
 }
 
-/* Helper Component for Contact Info */
 const ContactInfoCard = ({ icon, title, detail, subDetail }) => (
   <div className="bg-[#24242f] border border-gray-800 p-5 rounded-sm flex items-center gap-5 group hover:border-yellow-500/30 transition-colors">
     <div className="bg-[#1e1e28] text-yellow-500 p-4 rounded-sm transition-colors">
@@ -109,7 +103,6 @@ const ContactInfoCard = ({ icon, title, detail, subDetail }) => (
   </div>
 );
 
-/* Helper Component for Services */
 const ServiceCard = ({ icon, title, desc }) => (
   <div className="bg-[#24242f] border border-gray-800 p-6 rounded-sm hover:bg-[#2b2b35] transition-all group">
     <div className="text-yellow-500 text-2xl mb-4 group-hover:scale-110 transition-transform duration-300">

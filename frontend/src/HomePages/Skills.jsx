@@ -1,56 +1,76 @@
 import React from "react";
 
-const skills = [
-  { name: "HTML", level: 95 },
-  { name: "CSS", level: 85 },
-  { name: "JavaScript", level: 65 },
-  { name: "React", level: 80 },
-  { name: "C programming", level: 75 },
-  { name: "Java", level: 50 },
+const skillGroups = [
+  {
+    category: "Languages",
+    description: "Foundational logic and syntax",
+    skills: ["JavaScript", "Java", "C Programming", "Python (ML Basics)"],
+    featured: false,
+  },
+  {
+    category: "Frontend Development",
+    description: "Building responsive & interactive UIs",
+    skills: ["React.js", "HTML", "CSS", "Tailwind CSS", "Redux Toolkit"],
+    featured: true, 
+  },
+  {
+    category: "Backend & Database",
+    description: "Server-side logic and data persistence",
+    skills: ["Node.js", "Express.js", "MongoDB", "SQL", "Cloudinary" ],
+    featured: false,
+  },
+  {
+    category: "Tools & DevOps",
+    description: "Deployment and version control",
+    skills: ["Git", "GitHub", "Vercel", "Render","Firebase", "Postman","Brevo (SMTP)", "CI/CD Basics"],
+    featured: true,
+  },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-[#1e1e28] p-8 md:p-12 shadow-2xl scroll-mt-24 my-10 mt-10 rounded-lg">
-      {/* Header matching the About section */}
+    <section id="skills" className="bg-[#1e1e28] p-6 md:p-12 shadow-2xl my-10 border border-gray-800/50">
       <div className="mb-12">
         <h2 className="text-3xl font-bold text-white mb-4 relative inline-block">
           Technical Skills
           <span className="absolute -bottom-2 left-0 w-12 h-1 bg-yellow-500"></span>
         </h2>
-        <p className="text-[#8c8c8e] mt-6 text-sm max-w-2xl uppercase tracking-widest font-semibold">
-          Proficiency in web technologies and core programming languages.
-        </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-x-12 gap-y-8">
-        {skills.map((skill) => (
-          <div key={skill.name} className="group">
-            {/* Label Row */}
-            <div className="flex justify-between mb-2">
-              <span className="text-xs font-bold text-white uppercase tracking-tighter group-hover:text-yellow-500 transition-colors">
-                {skill.name}
-              </span>
-              <span className="text-[#8c8c8e] text-xs font-mono">{skill.level}%</span>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {skillGroups.map((group, idx) => (
+          <div
+            key={group.category}
+            className={`
+              relative overflow-hidden bg-[#24242f] p-8 border border-gray-800 
+              hover:border-yellow-500/30 transition-all duration-500 group
+              ${group.featured ? "md:col-span-2" : "md:col-span-1"}
+            `}
+          >
+            <div className="absolute -right-4 -top-4 text-6xl font-black text-white/[0.02] group-hover:text-yellow-500/[0.05] transition-colors">
+              0{idx + 1}
             </div>
 
-            {/* Progress Bar Container */}
-            <div className="w-full bg-[#191923] rounded-full h-1.5 overflow-hidden border border-gray-800">
-              <div
-                className="bg-yellow-500 h-full rounded-full transition-all duration-1000 ease-out shadow-[0_0_10px_rgba(255,193,7,0.3)]"
-                style={{ width: `${skill.level}%` }}
-              ></div>
+            <h3 className="text-lg font-bold text-white mb-1 group-hover:text-yellow-500 transition-colors">
+              {group.category}
+            </h3>
+            <p className="text-[#8c8c8e] text-xs mb-6 font-medium uppercase tracking-tighter">
+              {group.description}
+            </p>
+
+            <div className="flex flex-wrap gap-2">
+              {group.skills.map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1.5 bg-[#191923] text-white/70 text-[11px] font-bold rounded border border-gray-700/50 group-hover:border-gray-600 transition-all"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
+            
+            <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-yellow-500 group-hover:w-full transition-all duration-700"></div>
           </div>
-        ))}
-      </div>
-
-      {/* Optional: Knowledge Tags */}
-      <div className="mt-16 flex flex-wrap gap-3">
-        {['Tailwind CSS', 'Git/GitHub', 'UI Design', 'Responsive Layouts'].map((tag) => (
-          <span key={tag} className="px-4 py-1 bg-[#24242f] text-[#8c8c8e] text-[10px] uppercase font-bold tracking-widest border border-gray-800 rounded-sm">
-            {tag}
-          </span>
         ))}
       </div>
     </section>

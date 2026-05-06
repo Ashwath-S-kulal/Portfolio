@@ -11,13 +11,38 @@ import {
   Globe,
   CheckCircle2,
   Leaf,
-  HeartPulse
+  HeartPulse,
+  Briefcase
 } from "lucide-react";
 
 export default function Project() {
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [
+    {
+      img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952",
+      title: "Service Mate",
+      category: "Full Stack Development",
+      desc: "A complete service booking platform connecting users with service providers",
+      longDesc: "Service Mate is a multi-role service marketplace platform where users can explore, book, and review services while providers manage offerings, handle bookings, and assign workers. The system includes a powerful admin panel for monitoring users, approving services, and maintaining platform integrity. Designed with scalability and real-world workflows in mind, it ensures smooth interaction between users, providers, and administrators.",
+      techStack: ["React (Vite)", "Tailwind CSS", "Redux Toolkit", "Node.js", "Express.js", "MongoDB", "Cloudinary", "Brevo", "Vercel"],
+      features: [
+        "User, Provider, and Admin role-based system",
+        "OTP-based authentication using email",
+        "Service browsing and booking with preferred date",
+        "Provider approval system by admin",
+        "Providers can create and manage multiple services",
+        "Booking accept/reject with reason",
+        "Worker assignment and real-time status updates",
+        "Review and rating system after service completion",
+        "Admin dashboard to manage users, services, and reviews",
+        "Cloudinary integration for media uploads",
+        "Secure JWT Authentication"
+      ],
+      link: "https://servicemate-ashwathskulal.vercel.app/",
+      GitLink: "https://github.com/Ashwath-S-kulal/MERN_INTERNSHIP_2026_ASHWATH_S",
+      icon: <Briefcase size={18} />
+    },
     {
       img: "https://content.wotr.org/climate-resilient-agriculture/assets/0Y7zHIZCHJ/c0923_compressed_frame-0ms-720x405.jpg",
       title: "Climate Resilient Agriculture",
@@ -93,7 +118,6 @@ export default function Project() {
   return (
     <section id="projects" className="bg-[#1e1e28] px-4 md:px-8 py-20 mt-0 rounded-lg shadow-2xl relative overflow-hidden scroll-mt-16">
 
-      {/* Background Glows */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-500/5 blur-[120px] pointer-events-none"></div>
 
       <div className="mb-12">
@@ -105,14 +129,12 @@ export default function Project() {
           Proficiency in web technologies and core programming languages.
         </p>
       </div>
-      {/* Projects Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
         {projects.map((project, index) => (
           <div
             key={index}
             className="group flex flex-col md:flex-row bg-[#24242f] border border-gray-800/60 rounded-sm overflow-hidden hover:border-yellow-500/40 transition-all duration-500 hover:shadow-2xl"
           >
-            {/* 1. Visual Column */}
             <div className="md:w-[35%] relative bg-[#1e1e28] overflow-hidden">
               <img
                 src={project.img}
@@ -124,7 +146,6 @@ export default function Project() {
               </div>
             </div>
 
-            {/* 2. Data Column */}
             <div className="md:w-[65%] p-7 flex flex-col justify-between">
               <div>
                 <div className="flex justify-between items-start mb-3">
@@ -149,7 +170,6 @@ export default function Project() {
                 </p>
               </div>
 
-              {/* Action Bar */}
               <div className="flex items-center gap-4 pt-4 border-t border-gray-800/60">
                 <a
                   href={project.link}
@@ -179,7 +199,6 @@ export default function Project() {
         ))}
       </div>
 
-      {/* Case Study Modal */}
       {selectedProject && (
         <div className="fixed inset-0 flex items-center justify-center bg-[#0e0e12]/95 z-[100] backdrop-blur-xl px-4 py-6">
           <div className="bg-[#24242f] border border-gray-800 rounded-sm shadow-[0_0_50px_rgba(0,0,0,0.5)] w-full max-w-5xl relative animate-in zoom-in fade-in duration-300 flex flex-col md:flex-row overflow-hidden max-h-[90vh]">
@@ -190,8 +209,6 @@ export default function Project() {
             >
               <X size={20} />
             </button>
-
-            {/* Modal Left: Visuals */}
             <div className="md:w-[45%] p-8 bg-[#1e1e28]/50 flex flex-col border-b md:border-b-0 md:border-r border-gray-800">
               <div className="relative rounded-sm overflow-hidden border border-gray-800 group shadow-2xl">
                 <img
@@ -211,7 +228,6 @@ export default function Project() {
               </div>
             </div>
 
-            {/* Modal Right: Technical Specs */}
             <div className="md:w-[55%] p-8 md:p-12 overflow-y-auto custom-scrollbar">
               <span className="text-yellow-500 text-[10px] font-bold uppercase tracking-[4px] mb-3 block">
                 {selectedProject.category}
@@ -221,7 +237,6 @@ export default function Project() {
               </h2>
 
               <div className="space-y-10">
-                {/* Tech Badges */}
                 <section>
                   <h4 className="text-white/50 text-[9px] font-bold uppercase tracking-[3px] mb-4">Core Technology Stack</h4>
                   <div className="flex flex-wrap gap-2">
@@ -233,7 +248,6 @@ export default function Project() {
                   </div>
                 </section>
 
-                {/* Description */}
                 <section>
                   <h4 className="text-white/50 text-[9px] font-bold uppercase tracking-[3px] mb-4">Project Overview</h4>
                   <p className="text-[#8c8c8e] text-sm leading-relaxed font-medium">
@@ -241,7 +255,6 @@ export default function Project() {
                   </p>
                 </section>
 
-                {/* Feature Checkmarks */}
                 <section>
                   <h4 className="text-white/50 text-[9px] font-bold uppercase tracking-[3px] mb-4">Technical Deliverables</h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
@@ -254,7 +267,6 @@ export default function Project() {
                   </ul>
                 </section>
 
-                {/* Mobile Links */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-800">
                   <a
                     href={selectedProject.link}

@@ -17,7 +17,8 @@ import {
   FaHeartbeat,
   FaLock,
   FaShip,
-  FaArrowRight
+  FaArrowRight,
+  FaTools
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Footer from '../HomePages/Footer';
@@ -27,6 +28,12 @@ import Education from '../HomePages/Education';
 const PortfolioDashboard = () => {
 
   const projects = [
+    {
+      title: "Service Mate",
+      desc: "Multi-role service booking platform with admin and providers controls.",
+      link: "https://servicemate-ashwathskulal.vercel.app/",
+      icon: <FaTools />,
+    },
     {
       title: "Climate Resilient",
       desc: "Data-driven climate monitoring system.",
@@ -44,24 +51,17 @@ const PortfolioDashboard = () => {
       desc: "Secure MERN stack security portal.",
       link: "https://mern-authentication-web.onrender.com",
       icon: <FaLock />,
-    },
-    {
-      title: "Boat Advertising",
-      desc: "Modern landing page for maritime tech.",
-      link: "https://smartwatch-product-showcase-website.vercel.app/",
-      icon: <FaShip />,
     }
   ];
 
   return (
     <div className="flex flex-col lg:flex-row min-h-screen bg-[#1e1e28] text-[#8c8c8e] font-sans">
       <aside className="lg:w-80 bg-[#20202a] flex flex-col lg:fixed lg:h-full shadow-2xl z-20 mx-3 md:mx-0 mt-24 md:mt-0">
-        {/* Profile Header */}
         <div className="bg-[#24242f] p-8 text-center border-b border-gray-800">
           <div className="relative inline-block">
             <img
               src={ProfileImg}
-              alt="Artur Carter"
+              alt="Ashwath S"
               className="w-30 h-30 ring-3 ring-yellow-300 rounded-full mx-auto object-cover"
             />
             <span className="absolute bottom-1 right-2 w-4 h-4 bg-yellow-500 rounded-full border-2 border-[#24242f]"></span>
@@ -70,7 +70,6 @@ const PortfolioDashboard = () => {
           <p className="text-xs mt-1">Computer Science Engineer</p>
         </div>
 
-        {/* Info List */}
         <div className="p-6 space-y-3 text-sm overflow-y-auto flex-1">
           <p className='text-justify text-xs'>
             I have a strong foundation in software application development and enjoy creating meaningful web applications.
@@ -78,7 +77,6 @@ const PortfolioDashboard = () => {
 
           <hr className="border-gray-800 my-6" />
 
-          {/* Languages */}
           <div className="flex justify-around text-center py-4">
             <CircularSkill label="Kannada" percent={100} />
             <CircularSkill label="English" percent={90} />
@@ -87,7 +85,6 @@ const PortfolioDashboard = () => {
           <hr className="border-gray-800 my-6" />
         </div>
 
-        {/* Sidebar Footer - Socials */}
         <div className="bg-[#24242f] p-4 flex justify-around border-t border-gray-800">
           <NavLink to="https://www.linkedin.com/in/ashwath-s-56a5b2334/" target='blank'><Linkedin size={16} className="hover:text-white cursor-pointer" /></NavLink>
           <NavLink to="https://github.com/Ashwath-S-kulal" target='blank'><Github size={16} className="hover:text-white cursor-pointer" /></NavLink>
@@ -96,14 +93,10 @@ const PortfolioDashboard = () => {
         </div>
       </aside>
 
-      {/* Main Content Area */}
-      {/* Changed ml-80 to lg:ml-80 (0 on mobile). Added w-full */}
       <div className='flex-1 lg:ml-80 w-full overflow-hidden'>
         <NavBar />
         <main className="p-4 md:p-8 md:pt-5 pb-1 mb-10 shadow-2xl">
-          {/* Banner Section */}
           <section className="relative rounded-lg overflow-hidden mt-6 lg:mt-18 min-h-[400px] lg:h-96 mb-12 flex items-center px-6 lg:px-12">
-            {/* Background Overlay */}
             <div
               className="absolute inset-0 bg-cover bg-center grayscale opacity-30"
               style={{ backgroundImage: "url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2070')" }}
@@ -129,7 +122,6 @@ const PortfolioDashboard = () => {
               </div>
             </div>
 
-            {/* Floating Person */}
             <img
               src={ProfilePicture}
               alt="Hero"
@@ -137,7 +129,6 @@ const PortfolioDashboard = () => {
             />
           </section>
 
-          {/* Social Links Section */}
           <section className="mx-2 md:mx-5 mb-10">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
               <SocialLink icon={<FaGithub />} label="GitHub" link="https://github.com/Ashwath-S-kulal" hoverColor="hover:text-white hover:bg-gray-700" />
@@ -149,7 +140,6 @@ const PortfolioDashboard = () => {
             </div>
           </section>
 
-          {/* Latest Projects Section */}
           <section className="mx-2 md:mx-5 my-16">
             <h3 className="text-white font-bold text-xl mb-10 uppercase tracking-[3px] flex items-center gap-4">
               Latest Projects
@@ -188,7 +178,7 @@ const PortfolioDashboard = () => {
         <Projects />
         <Education />
         <Contact />
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );

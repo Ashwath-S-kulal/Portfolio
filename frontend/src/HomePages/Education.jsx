@@ -34,7 +34,6 @@ export default function Education() {
 
   return (
     <section id="education" className="bg-[#1e1e28] py-16 px-6 lg:px-12 relative overflow-hidden scroll-mt-16 mt-6 shadow-2xl">
-      {/* Header */}
         <div className="mb-12">
         <h2 className="text-3xl font-bold text-white mb-4 relative inline-block">
           Education
@@ -45,13 +44,11 @@ export default function Education() {
         </p>
       </div>
 
-      {/* Timeline Wrapper */}
       <div className="max-w-4xl mx-auto relative">
         <div className="absolute left-[15px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-yellow-500 via-gray-800 to-transparent"></div>
         <div className="space-y-12">
           {educationData.map((edu, index) => (
             <div key={index} className="relative pl-12 group">
-              {/* Timeline Node (The Circle) */}
               <div className={`absolute left-0 top-1 w-8 h-8 rounded-full border-4 border-[#1e1e28] z-10 flex items-center justify-center transition-all duration-500 ${
                 edu.current ? 'bg-yellow-500 shadow-[0_0_15px_rgba(234,179,8,0.4)]' : 'bg-gray-800 group-hover:bg-gray-700'
               }`}>
@@ -62,7 +59,6 @@ export default function Education() {
                 )}
               </div>
 
-              {/* Content Card */}
               <div className="bg-[#24242f] border border-gray-800 p-6 rounded-sm transition-all duration-300 group-hover:border-yellow-500/30 group-hover:bg-[#282835]">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
                   <div>
