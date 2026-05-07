@@ -21,7 +21,7 @@ export default function Project() {
   const projects = [
     {
       img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952",
-      title: "Service Mate",
+      title: "ServiceMate – Local Service Booking Platform",
       category: "Full Stack Development",
       desc: "A complete service booking platform connecting users with service providers",
       longDesc: "Service Mate is a multi-role service marketplace platform where users can explore, book, and review services while providers manage offerings, handle bookings, and assign workers. The system includes a powerful admin panel for monitoring users, approving services, and maintaining platform integrity. Designed with scalability and real-world workflows in mind, it ensures smooth interaction between users, providers, and administrators.",
@@ -45,7 +45,7 @@ export default function Project() {
     },
     {
       img: "https://content.wotr.org/climate-resilient-agriculture/assets/0Y7zHIZCHJ/c0923_compressed_frame-0ms-720x405.jpg",
-      title: "Climate Resilient Agriculture",
+      title: "Climate Resilient Agriculture Using Machine Learning",
       category: "Full Stack Development",
       desc: "The bridge between complex climate science and practical agricultural execution",
       longDesc: "To provide farmers, large and small, with unparalleled predictive intelligence necessary to combat the unpredictability of climate change. We aim to secure global food systems by making sustainable, high-yield farming accessible through technology.",
@@ -61,7 +61,7 @@ export default function Project() {
     },
     {
       img: "https://www.idfy.com/wp-content/uploads/2021/05/Healthcare-BGV-scaled.jpg",
-      title: "Health Care Website",
+      title: "Health Care - Smart Healthcare Assistance Platform",
       category: "Full Stack Development",
       desc: "Combining world-class clinical expertise to patients to provide personalized health journeys.",
       longDesc: "A full-stack healthcare platform designed to connect patients with nearby hospitals and medical experts. The application focuses on accessibility, responsiveness, and efficient healthcare discovery through a clean and intuitive user experience.",

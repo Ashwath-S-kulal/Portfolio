@@ -29,19 +29,19 @@ const PortfolioDashboard = () => {
 
   const projects = [
     {
-      title: "Service Mate",
+      title: "ServiceMate – Local Service Booking Platform",
       desc: "Multi-role service booking platform with admin and providers controls.",
       link: "https://servicemate-ashwathskulal.vercel.app/",
       icon: <FaTools />,
     },
     {
-      title: "Climate Resilient",
+      title: "Climate Resilient agriculture using machine learning",
       desc: "Data-driven climate monitoring system.",
       link: "https://climate-resilient-agriculture.onrender.com",
       icon: <FaCloudSun />,
     },
     {
-      title: "Health Care",
+      title: "Health Care - Smart Healthcare Assistance Platform",
       desc: "Patient management and portal system.",
       link: "https://health-bridge-medical-website.vercel.app/",
       icon: <FaHeartbeat />,
