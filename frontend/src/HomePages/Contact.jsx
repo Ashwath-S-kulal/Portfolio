@@ -4,12 +4,16 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaCode, FaPaintBrush, FaMobileA
 export default function Contact() {
   return (
     <section id="contact" className="bg-[#1e1e28] px-8 py-16 pt-1 scroll-mt-24 my-10 rounded-lg shadow-2xl">
-      <div className="mb-12">
-        <h2 className="text-3xl font-bold text-white mb-4 relative inline-block">
-          Contact & Services
-          <span className="absolute -bottom-2 left-0 w-12 h-1 bg-yellow-500"></span>
-        </h2>
-      </div>
+      <header className="border-b border-gray-800/80 bg-[#1e1e28]/40 sticky top-0 backdrop-blur-md z-40 pb-10">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <h1 className="text-2xl font-black tracking-tight text-white flex items-center gap-2">
+              <span className="text-yellow-500">//</span> Contact & Services
+            </h1>
+            <p className="text-xs text-[#8c8c8e] font-mono mt-1 uppercase tracking-wider">My Contact details</p>
+          </div>
+        </div>
+      </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-1 space-y-4">

@@ -8,8 +8,8 @@ export default function Education() {
       sub: 'Computer Science & Engineering',
       school: 'Shree Dharmasthala Manjunatheshwara Institute of Technology',
       location: 'Ujire, Dakshinakannada, Karnataka',
-      result: '8.48 CGPA',
-      period: '2022 — Present',
+      result: '8.52 CGPA',
+      period: '2022 — 2026',
       current: true,
     },
     {
@@ -34,26 +34,26 @@ export default function Education() {
 
   return (
     <section id="education" className="bg-[#1e1e28] py-16 px-6 lg:px-12 relative overflow-hidden scroll-mt-16 mt-6 shadow-2xl">
-        <div className="mb-12">
-        <h2 className="text-3xl font-bold text-white mb-4 relative inline-block">
-          Education
-          <span className="absolute -bottom-2 left-0 w-12 h-1 bg-yellow-500"></span>
-        </h2>
-        <p className="text-[#8c8c8e] mt-3 text-sm max-w-2xl uppercase tracking-widest font-semibold">
-          My Educational details
-        </p>
-      </div>
+      <header className="border-b border-gray-800/80 bg-[#1e1e28]/40 sticky top-0 backdrop-blur-md z-40 pb-8">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <h1 className="text-2xl font-black tracking-tight text-white flex items-center gap-2">
+              <span className="text-yellow-500">//</span> Education
+            </h1>
+            <p className="text-xs text-[#8c8c8e] font-mono mt-1 uppercase tracking-wider">My Educational details</p>
+          </div>
+        </div>
+      </header>
 
-      <div className="max-w-4xl mx-auto relative">
+      <div className="max-w-7xl mx-auto relative mt-5">
         <div className="absolute left-[15px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-yellow-500 via-gray-800 to-transparent"></div>
         <div className="space-y-12">
           {educationData.map((edu, index) => (
             <div key={index} className="relative pl-12 group">
-              <div className={`absolute left-0 top-1 w-8 h-8 rounded-full border-4 border-[#1e1e28] z-10 flex items-center justify-center transition-all duration-500 ${
-                edu.current ? 'bg-yellow-500 shadow-[0_0_15px_rgba(234,179,8,0.4)]' : 'bg-gray-800 group-hover:bg-gray-700'
-              }`}>
+              <div className={`absolute left-0 top-1 w-8 h-8 rounded-full border-4 border-[#1e1e28] z-10 flex items-center justify-center transition-all duration-500 ${edu.current ? 'bg-yellow-500 shadow-[0_0_15px_rgba(234,179,8,0.4)]' : 'bg-gray-800 group-hover:bg-gray-700'
+                }`}>
                 {edu.current ? (
-                   <div className="w-2 h-2 bg-black rounded-full animate-pulse"></div>
+                  <div className="w-2 h-2 bg-black rounded-full animate-pulse"></div>
                 ) : (
                   <CheckCircle2 size={12} className="text-gray-500 group-hover:text-yellow-500" />
                 )}

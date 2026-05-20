@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   X,
@@ -12,15 +12,62 @@ import {
   CheckCircle2,
   Leaf,
   HeartPulse,
-  Briefcase
+  Briefcase,
+  ArrowLeft
 } from "lucide-react";
+
+import serviceMatePic1 from "../Images/Servicemate/Screenshot 2026-05-20 124911.png";
+import serviceMatePic2 from "../Images/Servicemate/Screenshot 2026-05-20 124835.png";
+import serviceMatePic3 from "../Images/Servicemate/Screenshot 2026-05-20 124821.png";
+
+import CRAPic1 from "../Images/CRA/Screenshot 2026-05-20 125446.png";
+import CRAPic2 from "../Images/CRA/Screenshot 2026-05-20 125422.png";
+import CRAPic3 from "../Images/CRA/Screenshot 2026-05-20 125359.png";
+
+import healthCarePic1 from "../Images/HealthCare/Screenshot 2026-05-20 125310.png";
+import healthCarePic2 from "../Images/HealthCare/Screenshot 2026-05-20 125118.png";
+import healthCarePic3 from "../Images/HealthCare/Screenshot 2026-05-20 125052.png";
+
+import mernAuthPic1 from "../Images/Auth/Screenshot 2026-05-20 125604.png";
+import mernAuthPic2 from "../Images/Auth/Screenshot 2026-05-20 125617.png";
+import mernAuthPic3 from "../Images/Auth/Screenshot 2026-05-20 125630.png";
+
+import boatAdPic1 from "../Images/Boat/Screenshot 2026-05-20 125523.png";
+import boatAdPic2 from "../Images/Boat/Screenshot 2026-05-20 125516.png";
+import boatAdPic3 from "../Images/Boat/Screenshot 2026-05-20 125508.png";
 
 export default function Project() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [activeViewerImage, setActiveViewerImage] = useState("");
+
+
+  useEffect(() => {
+    if (!selectedProject) {
+      document.body.style.overflow = "unset";
+      return;
+    }
+
+    const initialImage = selectedProject.extraImages && selectedProject.extraImages.length > 0
+      ? selectedProject.extraImages[0]
+      : selectedProject.img;
+
+    const frameId = requestAnimationFrame(() => {
+      setActiveViewerImage(initialImage);
+    });
+
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      cancelAnimationFrame(frameId);
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedProject]);
+
 
   const projects = [
     {
       img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952",
+      extraImages: [serviceMatePic3, serviceMatePic2, serviceMatePic1],
       title: "ServiceMate – Local Service Booking Platform",
       category: "Full Stack Development",
       desc: "A complete service booking platform connecting users with service providers",
@@ -45,6 +92,7 @@ export default function Project() {
     },
     {
       img: "https://content.wotr.org/climate-resilient-agriculture/assets/0Y7zHIZCHJ/c0923_compressed_frame-0ms-720x405.jpg",
+      extraImages: [CRAPic1, CRAPic2, CRAPic3],
       title: "Climate Resilient Agriculture Using Machine Learning",
       category: "Full Stack Development",
       desc: "The bridge between complex climate science and practical agricultural execution",
@@ -61,6 +109,7 @@ export default function Project() {
     },
     {
       img: "https://www.idfy.com/wp-content/uploads/2021/05/Healthcare-BGV-scaled.jpg",
+      extraImages: [healthCarePic3, healthCarePic1, healthCarePic2],
       title: "Health Care - Smart Healthcare Assistance Platform",
       category: "Full Stack Development",
       desc: "Combining world-class clinical expertise to patients to provide personalized health journeys.",
@@ -75,10 +124,10 @@ export default function Project() {
       link: "https://health-bridge-medical-website.vercel.app/",
       GitLink: "https://github.com/Ashwath-S-kulal/Health-Bridge-Medical-Website",
       icon: <HeartPulse size={18} />
-    }
-    ,
+    },
     {
       img: "https://material.dahuasecurity.com/uploads/image/20240516/news0516300200.png",
+      extraImages: [mernAuthPic1, mernAuthPic2, mernAuthPic3],
       title: "MERN Authentication",
       category: "Full Stack Development",
       desc: "Secure user management system with Google OAuth and JWT.",
@@ -91,6 +140,7 @@ export default function Project() {
     },
     {
       img: "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/lR_Radiant.png?v=1734949919",
+      extraImages: [boatAdPic1, boatAdPic2, boatAdPic3],
       title: "Boat Advertising App",
       category: "Frontend Engineering",
       desc: "Modern product showcase with high-fidelity UI and animations.",
@@ -103,6 +153,7 @@ export default function Project() {
     },
     {
       img: "https://miro.medium.com/v2/resize:fit:1400/1*Onh9cW9KtGjDrlf5NzGYMw.jpeg",
+      extraImages: [],
       title: "Static Portfolio Website",
       category: "Personal project",
       desc: "The central hub for professional experience and skills.",
@@ -116,180 +167,211 @@ export default function Project() {
   ];
 
   return (
-    <section id="projects" className="bg-[#1e1e28] px-4 md:px-8 py-20 mt-0 rounded-lg shadow-2xl relative overflow-hidden scroll-mt-16">
+    <div>
+      <section id="projects" className="bg-[#1e1e28] px-4 md:px-8 py-20 mt-0 rounded-lg shadow-2xl relative overflow-hidden scroll-mt-16">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-500/5 blur-[120px] pointer-events-none"></div>
 
-      <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-500/5 blur-[120px] pointer-events-none"></div>
+        <header className="border-b border-gray-800/80 bg-[#1e1e28]/40 sticky top-0 backdrop-blur-md z-40 pb-10">
+          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <h1 className="text-2xl font-black tracking-tight text-white flex items-center gap-2">
+                <span className="text-yellow-500">//</span> Projects
+              </h1>
+              <p className="text-xs text-[#8c8c8e] font-mono mt-1 uppercase tracking-wider">Proficiency in web technologies and core programming languages.</p>
+            </div>
+          </div>
+        </header>
 
-      <div className="mb-12">
-        <h2 className="text-3xl font-bold text-white mb-4 relative inline-block">
-          Projects
-          <span className="absolute -bottom-2 left-0 w-12 h-1 bg-yellow-500"></span>
-        </h2>
-        <p className="text-[#8c8c8e] mt-6 text-sm max-w-2xl uppercase tracking-widest font-semibold">
-          Proficiency in web technologies and core programming languages.
-        </p>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
-        {projects.map((project, index) => (
-          <div
-            key={index}
-            className="group flex flex-col md:flex-row bg-[#24242f] border border-gray-800/60 rounded-sm overflow-hidden hover:border-yellow-500/40 transition-all duration-500 hover:shadow-2xl"
-          >
-            <div className="md:w-[35%] relative bg-[#1e1e28] overflow-hidden">
-              <img
-                src={project.img}
-                alt={project.title}
-                className="w-full h-full object-cover opacity-30 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 min-h-[220px]"
-              />
-              <div className="absolute top-4 left-4 text-[9px] font-mono text-yellow-500/40 group-hover:text-yellow-500 font-bold bg-black/40 px-2 py-1 rounded-sm backdrop-blur-md">
-                Project {index + 1}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="group flex flex-col md:flex-row bg-[#24242f] border border-gray-800/60 rounded-sm overflow-hidden hover:border-yellow-500/40 transition-all duration-500 hover:shadow-2xl"
+            >
+              <div
+                onClick={() => setSelectedProject(project)}
+                className="md:w-[35%] relative bg-[#1e1e28] overflow-hidden cursor-pointer"
+              >
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-full object-cover opacity-30 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700 min-h-[220px]"
+                />
+                <div className="absolute top-4 left-4 text-[9px] font-mono text-yellow-500/40 group-hover:text-yellow-500 font-bold bg-black/40 px-2 py-1 rounded-sm backdrop-blur-md">
+                  Project {index + 1}
+                </div>
+              </div>
+
+              <div className="md:w-[65%] p-7 flex flex-col justify-between">
+                <div onClick={() => setSelectedProject(project)} className="cursor-pointer">
+                  <div className="flex justify-between items-start mb-3">
+                    <h3 className="text-white text-lg font-bold tracking-tight group-hover:text-yellow-500 transition-colors">
+                      {project.title}
+                    </h3>
+                    <div className="text-gray-600 group-hover:text-yellow-500 transition-colors">
+                      {project.icon}
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.techStack.slice(0, 3).map((tech) => (
+                      <span key={tech} className="text-[9px] bg-[#1e1e28] text-[#8c8c8e] px-2 py-0.5 rounded-sm border border-gray-800 uppercase tracking-widest group-hover:border-yellow-500/30 transition-colors">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  <p className="text-[#8c8c8e] text-xs leading-relaxed mb-6 line-clamp-2 italic">
+                    {project.desc}
+                  </p>
+                </div>
+
+                <div className="flex items-center gap-4 pt-4 border-t border-gray-800/60">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-[#1e1e28] text-white text-[10px] font-bold uppercase tracking-widest hover:bg-yellow-500 hover:text-black transition-all"
+                  >
+                    Live View <ExternalLink size={12} />
+                  </a>
+                  <a
+                    href={project.GitLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2.5 bg-[#1e1e28] text-gray-500 hover:text-white border border-transparent hover:border-gray-700 transition-all"
+                  >
+                    <Github size={16} />
+                  </a>
+                  <button
+                    onClick={() => setSelectedProject(project)}
+                    className="p-2.5 bg-[#1e1e28] text-gray-500 hover:text-yellow-500 border border-transparent hover:border-yellow-500/20 transition-all"
+                  >
+                    <Info size={16} />
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {selectedProject && (
+        <div className="fixed inset-0 bg-[#14141b] z-[9999] overflow-y-auto px-4 md:px-16 pb-12 pt-0 animate-in fade-in duration-300">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-yellow-500/[0.03] blur-[150px] pointer-events-none"></div>
+
+          <div className="max-w-screen mx-auto relative">
+            <div className="sticky top-0 z-50 bg-[#14141b] pt-6 mb-10 flex items-center justify-between border-b border-gray-800 pb-4">
+              <button
+                onClick={() => setSelectedProject(null)}
+                className="flex items-center gap-2 px-5 py-2.5 bg-[#1e1e28] text-gray-400 hover:text-yellow-500 rounded-sm border border-gray-800 hover:border-yellow-500/30 transition-all text-xs font-bold uppercase tracking-wider"
+              >
+                <ArrowLeft size={16} /> Back to Projects
+              </button>
+
+              <div className="flex items-center gap-3 text-green-500 text-[10px] font-bold uppercase tracking-widest bg-[#1e1e28] px-4 py-2 rounded-sm border border-gray-800">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                Active on Production
               </div>
             </div>
 
-            <div className="md:w-[65%] p-7 flex flex-col justify-between">
-              <div>
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-white text-lg font-bold tracking-tight group-hover:text-yellow-500 transition-colors">
-                    {project.title}
-                  </h3>
-                  <div className="text-gray-600 group-hover:text-yellow-500 transition-colors">
-                    {project.icon}
-                  </div>
+            <div className="flex flex-col lg:flex-row gap-12 items-start">
+              <div className="w-full lg:w-[45%] space-y-4 lg:sticky lg:top-[100px]">
+                <div className="relative rounded-sm overflow-hidden border border-gray-800 bg-[#1e1e28] shadow-2xl transition-all duration-300">
+                  <img
+                    src={activeViewerImage}
+                    alt="Active Snapshot View"
+                    className="w-full h-auto object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#14141b]/40 to-transparent"></div>
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.techStack.slice(0, 3).map((tech) => (
-                    <span key={tech} className="text-[9px] bg-[#1e1e28] text-[#8c8c8e] px-2 py-0.5 rounded-sm border border-gray-800 uppercase tracking-widest group-hover:border-yellow-500/30 transition-colors">
-                      {tech}
-                    </span>
+                <div className="grid grid-cols-3 gap-3">
+                  {selectedProject.extraImages && selectedProject.extraImages.slice(0, 3).map((screenshot, idx) => (
+                    <div
+                      key={idx}
+                      onClick={() => setActiveViewerImage(screenshot)}
+                      className={`aspect-video rounded-sm overflow-hidden relative cursor-pointer border transition-all ${activeViewerImage === screenshot ? "border-yellow-500 scale-[0.97]" : "border-gray-800 opacity-60 hover:opacity-100"
+                        }`}
+                    >
+                      <img src={screenshot} alt={`Snapshot Layout ${idx + 1}`} className="w-full h-full object-cover" />
+                      <div className="absolute bottom-1 right-1 bg-black/60 px-1 text-[7px] text-gray-400 font-mono">0{idx + 1}</div>
+                    </div>
                   ))}
                 </div>
 
-                <p className="text-[#8c8c8e] text-xs leading-relaxed mb-6 line-clamp-2 italic">
-                  {project.desc}
-                </p>
-              </div>
-
-              <div className="flex items-center gap-4 pt-4 border-t border-gray-800/60">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 py-2.5 bg-[#1e1e28] text-white text-[10px] font-bold uppercase tracking-widest hover:bg-yellow-500 hover:text-black transition-all"
-                >
-                  Live View <ExternalLink size={12} />
-                </a>
-                <a
-                  href={project.GitLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2.5 bg-[#1e1e28] text-gray-500 hover:text-white border border-transparent hover:border-gray-700 transition-all"
-                >
-                  <Github size={16} />
-                </a>
-                <button
-                  onClick={() => setSelectedProject(project)}
-                  className="p-2.5 bg-[#1e1e28] text-gray-500 hover:text-yellow-500 border border-transparent hover:border-yellow-500/20 transition-all"
-                >
-                  <Info size={16} />
-                </button>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {selectedProject && (
-        <div className="fixed inset-0 flex items-center justify-center bg-[#0e0e12]/95 z-[100] backdrop-blur-xl px-4 py-6">
-          <div className="bg-[#24242f] border border-gray-800 rounded-sm shadow-[0_0_50px_rgba(0,0,0,0.5)] w-full max-w-5xl relative animate-in zoom-in fade-in duration-300 flex flex-col md:flex-row overflow-hidden max-h-[90vh]">
-
-            <button
-              onClick={() => setSelectedProject(null)}
-              className="absolute top-4 right-4 z-[110] p-2 bg-black/50 text-white rounded-full hover:bg-yellow-500 hover:text-black transition-all"
-            >
-              <X size={20} />
-            </button>
-            <div className="md:w-[45%] p-8 bg-[#1e1e28]/50 flex flex-col border-b md:border-b-0 md:border-r border-gray-800">
-              <div className="relative rounded-sm overflow-hidden border border-gray-800 group shadow-2xl">
-                <img
-                  src={selectedProject.img}
-                  alt={selectedProject.title}
-                  className="w-full aspect-video object-cover"
-                />
-                <div className="absolute inset-0 bg-yellow-500/5 mix-blend-overlay"></div>
-              </div>
-
-              <div className="mt-auto space-y-4 hidden md:block">
-                <h4 className="text-white text-[10px] font-bold uppercase tracking-[3px] opacity-40">Deployment Status</h4>
-                <div className="flex items-center gap-3 text-green-500 text-[10px] font-bold uppercase tracking-widest">
-                  <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                  Active on Production
+                <div className="bg-[#1e1e28] p-5 border border-gray-800 rounded-sm mt-4">
+                  <span className="text-gray-500 text-[9px] font-bold uppercase tracking-[3px] block mb-2">Category Assignment</span>
+                  <div className="text-white font-bold text-sm flex items-center gap-2">
+                    {selectedProject.icon} {selectedProject.category}
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="md:w-[55%] p-8 md:p-12 overflow-y-auto custom-scrollbar">
-              <span className="text-yellow-500 text-[10px] font-bold uppercase tracking-[4px] mb-3 block">
-                {selectedProject.category}
-              </span>
-              <h2 className="text-4xl font-black text-white mb-8 tracking-tighter">
-                {selectedProject.title}
-              </h2>
+              <div className="w-full lg:w-[55%] space-y-10 pb-12">
+                <div>
+                  <h1 className="text-3xl md:text-5xl font-black text-white tracking-tight mb-4 leading-tight">
+                    {selectedProject.title}
+                  </h1>
+                  <p className="text-yellow-500 italic text-sm font-medium tracking-wide">
+                    "{selectedProject.desc}"
+                  </p>
+                </div>
 
-              <div className="space-y-10">
-                <section>
-                  <h4 className="text-white/50 text-[9px] font-bold uppercase tracking-[3px] mb-4">Core Technology Stack</h4>
-                  <div className="flex flex-wrap gap-2">
+                <section className="border-t border-gray-800 pt-6">
+                  <h4 className="text-gray-500 text-[9px] font-bold uppercase tracking-[3px] mb-4">Project Architecture Summary</h4>
+                  <p className="text-[#8c8c8e] text-base leading-relaxed font-normal">
+                    {selectedProject.longDesc}
+                  </p>
+                </section>
+
+                <section className="border-t border-gray-800 pt-6">
+                  <h4 className="text-gray-500 text-[9px] font-bold uppercase tracking-[3px] mb-4">Core Engineering Stack</h4>
+                  <div className="flex flex-wrap gap-2.5">
                     {selectedProject.techStack.map((tech) => (
-                      <span key={tech} className="bg-[#1e1e28] text-white text-[10px] px-4 py-1.5 border border-gray-800 font-medium">
+                      <span key={tech} className="bg-[#1e1e28] text-white text-xs px-4 py-2 border border-gray-800 font-mono tracking-wide rounded-sm">
                         {tech}
                       </span>
                     ))}
                   </div>
                 </section>
 
-                <section>
-                  <h4 className="text-white/50 text-[9px] font-bold uppercase tracking-[3px] mb-4">Project Overview</h4>
-                  <p className="text-[#8c8c8e] text-sm leading-relaxed font-medium">
-                    {selectedProject.longDesc}
-                  </p>
-                </section>
-
-                <section>
-                  <h4 className="text-white/50 text-[9px] font-bold uppercase tracking-[3px] mb-4">Technical Deliverables</h4>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3">
+                <section className="border-t border-gray-800 pt-6">
+                  <h4 className="text-gray-500 text-[9px] font-bold uppercase tracking-[3px] mb-4">Functional & Technical Deliverables</h4>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
                     {selectedProject.features.map((feature, i) => (
-                      <li key={i} className="flex items-center gap-3 text-[#8c8c8e] text-xs font-semibold">
-                        <CheckCircle2 size={14} className="text-yellow-500" />
-                        {feature}
+                      <li key={i} className="flex items-start gap-3 text-[#8c8c8e] text-xs font-medium leading-normal">
+                        <CheckCircle2 size={15} className="text-yellow-500 shrink-0 mt-0.5" />
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </section>
 
-                <div className="flex flex-col sm:flex-row gap-4 pt-6 border-t border-gray-800">
+                <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-gray-800">
                   <a
                     href={selectedProject.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 bg-yellow-500 text-black text-center py-4 text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-all flex items-center justify-center gap-2"
+                    className="flex-1 bg-yellow-500 text-black text-center py-4 text-xs font-bold uppercase tracking-widest hover:bg-white transition-all flex items-center justify-center gap-2 rounded-sm shadow-lg shadow-yellow-500/10"
                   >
-                    <ExternalLink size={14} /> Live Demo
+                    <ExternalLink size={14} /> Launch Live Deployment
                   </a>
                   <a
                     href={selectedProject.GitLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 border border-gray-700 text-white text-center py-4 text-[10px] font-bold uppercase tracking-widest hover:border-yellow-500 transition-all flex items-center justify-center gap-2"
+                    className="flex-1 border border-gray-800 text-white text-center py-4 text-xs font-bold uppercase tracking-widest hover:border-yellow-500 transition-all flex items-center justify-center gap-2 bg-[#1e1e28]"
                   >
-                    <Github size={14} /> Repository
+                    <Github size={14} /> Open Git Repository
                   </a>
                 </div>
+
               </div>
             </div>
           </div>
         </div>
       )}
-    </section>
+    </div>
   );
 }

@@ -3,31 +3,39 @@ import { ChevronRight } from 'lucide-react';
 import ProfileImg from "../Images/1-removebg-preview.png";
 
 export default function About() {
- const details = [
+  const details = [
     { label: "Birthday", value: "19 Sep 2004" },
     { label: "Age", value: "22" },
     { label: "Degree", value: "Engineering" },
     { label: "City", value: "Kundapura, Karnataka" },
     { label: "Phone", value: "+91 8431294514" },
     { label: "Email", value: "ashwathkulal2004@gmail.com" },
-    { label: "Language", value: "Kannada, English" }, 
-    { label: "Availability", value: "Open to Internships / Full-time" }, 
+    { label: "Language", value: "Kannada, English" },
+    { label: "Availability", value: "Open to Internships / Full-time" },
   ];
 
   return (
     <section id="about" className="bg-[#1e1e28] text-[#8c8c8e] px-8 py-16 scroll-mt-24 rounded-lg shadow-2xl">
+      <header className="border-b border-gray-800/80 bg-[#1e1e28]/40 sticky top-0 backdrop-blur-md z-40 py-5">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div>
+            <h1 className="text-2xl font-black tracking-tight text-white flex items-center gap-2">
+              <span className="text-yellow-500">//</span> About me
+            </h1>
+            <p className="text-xs text-[#8c8c8e] font-mono mt-1 uppercase tracking-wider">My Deep Introduction</p>
+          </div>
+        </div>
+      </header>
+
       <div className="mb-12">
-        <h2 className="text-3xl font-bold text-white mb-4 relative inline-block">
-          About Me
-          <span className="absolute -bottom-2 left-0 w-12 h-1 bg-yellow-500"></span>
-        </h2>
         <p className="mt-6 leading-relaxed text-justify">
-          Hi, I am <span className="text-white font-semibold">Ashwath S</span>, currently studying Computer Science Engineering at S D M Institute of Technology, Ujire. 
-          I am deeply interested in frontend development, focusing on creating proactive and versatile digital experiences. 
-          With strong problem-solving abilities and a dedication to achieving positive results, I am devoted to giving every 
+          Hi, I am <span className="text-white font-semibold">Ashwath S</span>, Completed my Computer Science Engineering at S D M Institute of Technology, Ujire.
+          I am deeply interested in frontend development, focusing on creating proactive and versatile digital experiences.
+          With strong problem-solving abilities and a dedication to achieving positive results, I am devoted to giving every
           user a memorable experience through clean code and intuitive design.
         </p>
       </div>
+
 
       <div className="flex flex-col lg:flex-row gap-12 items-start">
         <div className="relative group w-full lg:w-1/3 flex justify-center">
@@ -63,14 +71,14 @@ export default function About() {
 
           <div className="mt-10 flex gap-4">
             <a href="https://ashwathskulalportfolio.vercel.app//pdfs/Resume (Ashwath_S).pdf" download="RESUME_Ashwath_S.pdf">
-            <button className="bg-yellow-500 text-black px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-yellow-400 transition-colors cursor-pointer">
-              Download CV
-            </button>
+              <button className="bg-yellow-500 text-black px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-yellow-400 transition-colors cursor-pointer">
+                Download CV
+              </button>
             </a>
             <a href="mailto:ashwathkulal2004@gmail.com">
-            <button className="border border-gray-700 text-white px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all cursor-pointer">
-              Contact Me
-            </button>
+              <button className="border border-gray-700 text-white px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all cursor-pointer">
+                Contact Me
+              </button>
             </a>
           </div>
         </div>

@@ -24,6 +24,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import Footer from '../HomePages/Footer';
 import { NavLink } from 'react-router-dom';
 import Education from '../HomePages/Education';
+import FreelanceProjects from '../HomePages/Freelance';
 
 const PortfolioDashboard = () => {
 
@@ -175,6 +176,7 @@ const PortfolioDashboard = () => {
         </main>
         <About />
         <Skills />
+        <FreelanceProjects/>
         <Projects />
         <Education />
         <Contact />
