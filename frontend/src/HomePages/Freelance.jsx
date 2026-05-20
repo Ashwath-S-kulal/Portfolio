@@ -151,7 +151,7 @@ export default function FreelanceProjects() {
                             >
                                 <ArrowLeft size={16} /> Exit Technical Sheet
                             </button>
-                            <div className="text-[10px] font-mono text-gray-500 bg-[#1e1e28] px-3 py-1.5 rounded-sm border border-gray-800/80 uppercase tracking-widest">
+                            <div className="hidden md:inline text-[10px] font-mono text-gray-500 bg-[#1e1e28] px-3 py-1.5 rounded-sm border border-gray-800/80 uppercase tracking-widest">
                                 System Mode: Deep Dive
                             </div>
                         </div>

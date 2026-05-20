@@ -168,7 +168,7 @@ export default function Project() {
 
   return (
     <div>
-      <section id="projects" className="bg-[#1e1e28] px-4 md:px-8 py-20 mt-0 rounded-lg shadow-2xl relative overflow-hidden scroll-mt-16">
+      <section id="projects" className="bg-[#1e1e28] px-4 md:px-8 py-14 mt-0 rounded-lg shadow-2xl relative overflow-hidden scroll-mt-16">
         <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-500/5 blur-[120px] pointer-events-none"></div>
 
         <header className="border-b border-gray-800/80 bg-[#1e1e28]/40 sticky top-0 backdrop-blur-md z-40 pb-10">
@@ -269,7 +269,7 @@ export default function Project() {
                 <ArrowLeft size={16} /> Back to Projects
               </button>
 
-              <div className="flex items-center gap-3 text-green-500 text-[10px] font-bold uppercase tracking-widest bg-[#1e1e28] px-4 py-2 rounded-sm border border-gray-800">
+              <div className="hidden md:inline flex items-center gap-3 text-green-500 text-[10px] font-bold uppercase tracking-widest bg-[#1e1e28] px-4 py-2 rounded-sm border border-gray-800">
                 <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
                 Active on Production
               </div>

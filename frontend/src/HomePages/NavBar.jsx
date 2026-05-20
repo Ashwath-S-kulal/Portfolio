@@ -20,7 +20,7 @@ export default function NavBar() {
   return (
     <header className="fixed top-0 left-0 lg:left-80 w-full lg:w-[calc(100%-20rem)] z-50 bg-[#1e1e28]/90 backdrop-blur-md border-b border-gray-800 text-gray-200 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div className="flex justify-between items-center h-12">
+        <div className="flex justify-between items-center h-20 md:h-14">
           <div className="flex items-center gap-3">
             <div className="relative">
               <img
