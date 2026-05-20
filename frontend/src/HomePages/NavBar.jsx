@@ -18,15 +18,15 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 lg:left-80 w-full lg:w-[calc(100%-20rem)] z-50 bg-[#1e1e28]/90 backdrop-blur-md border-b border-gray-800 text-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+    <header className="fixed top-0 left-0 lg:left-80 w-full lg:w-[calc(100%-20rem)] z-50 bg-[#1e1e28]/90 backdrop-blur-md border-b border-gray-800 text-gray-200 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div className="flex justify-between items-center h-12">
           <div className="flex items-center gap-3">
             <div className="relative">
               <img
                 src={ProfileImage}
                 alt="Profile"
-                className="w-10 h-10 rounded-full ring-2 ring-yellow-500 object-cover"
+                className="w-8 h-8 rounded-full ring-2 ring-yellow-500 object-cover"
               />
               <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#1e1e28] rounded-full"></span>
             </div>

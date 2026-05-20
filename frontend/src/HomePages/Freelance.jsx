@@ -83,13 +83,13 @@ export default function FreelanceProjects() {
 
 
     return (
-        <div className="min-h-fit bg-[#14141b] text-white font-sans antialiased selection:bg-yellow-500 selection:text-black">
+        <div className="min-h-fit bg-[#1e1e28] text-white font-sans  shadow-2xl my-10 border border-gray-800/50">
 
-            <header className="border-b border-gray-800/80 bg-[#1e1e28]/40 sticky top-0 backdrop-blur-md z-40 px-4 md:px-12 py-5">
+            <header className=" bg-[#1e1e28]/40 sticky top-0 backdrop-blur-md z-40 px-4 md:px-12 py-5">
                 <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                     <div>
                         <h1 className="text-2xl font-black tracking-tight text-white flex items-center gap-2">
-                            <span className="text-yellow-500">//</span> Freelance 
+                            <span className="text-yellow-500">//</span> Freelance
                         </h1>
                         <p className="text-xs text-[#8c8c8e] font-mono mt-1 uppercase tracking-wider">Dual-Platform Product System</p>
                     </div>
@@ -97,7 +97,7 @@ export default function FreelanceProjects() {
                 </div>
 
                 <main className="max-w-7xl mx-auto py-6" onClick={() => setSelectedProject(project)}>
-                    <section className="bg-[#1e1e28] border border-gray-800/60 rounded-sm p-2.5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 transition-all hover:border-gray-700/80">
+                    <section className="bg-[#14141b] border border-gray-800/60 rounded-sm p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3 transition-all hover:border-gray-700/80">
 
                         <div className="flex items-center gap-3 min-w-0 flex-1">
                             <div className="w-12 h-12 shrink-0 bg-[#14141b] rounded-sm border border-gray-800 overflow-hidden">
@@ -108,7 +108,7 @@ export default function FreelanceProjects() {
                                 />
                             </div>
 
-                            <div className="min-w-0 space-y-1">
+                            <div className="min-w-0 space-y-2">
                                 <h2 className="text-sm font-bold text-white truncate tracking-tight">
                                     {project.title}
                                 </h2>
