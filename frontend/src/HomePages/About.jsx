@@ -51,7 +51,7 @@ export default function About() {
 
         <div className="w-full lg:w-2/3">
           <h3 className="text-2xl font-bold text-white mb-2">
-            Computer Science Engineer & <span className="text-yellow-500">Frontend Developer</span>
+            Computer Science Engineer <span className="text-yellow-500"></span>
           </h3>
           <p className="italic text-sm mb-8 text-gray-400">
             "Turning complex problems into elegant, user-friendly digital solutions."
