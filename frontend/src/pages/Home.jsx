@@ -1,5 +1,5 @@
 import React from 'react';
-import { Linkedin, Dribbble, Github, Twitter, ChevronRight, ExternalLink, ArrowRight, Mail } from 'lucide-react';
+import { Linkedin, Dribbble, Github, Twitter, ChevronRight, ExternalLink, ArrowRight, Mail, Download, Check } from 'lucide-react';
 import NavBar from '../HomePages/NavBar';
 import About from '../HomePages/About';
 import Skills from '../HomePages/Skills';
@@ -58,6 +58,7 @@ const PortfolioDashboard = () => {
   return (
     <div className="flex flex-col lg:flex-row min-h-screen bg-[#1e1e28] text-[#8c8c8e] font-sans">
       <aside className="lg:w-80 bg-[#20202a] flex flex-col lg:fixed lg:h-full shadow-2xl z-20 mx-3 md:mx-0 mt-24 md:mt-0">
+
         <div className="bg-[#24242f] p-8 text-center border-b border-gray-800">
           <div className="relative inline-block">
             <img
@@ -68,29 +69,65 @@ const PortfolioDashboard = () => {
             <span className="absolute bottom-1 right-2 w-4 h-4 bg-yellow-500 rounded-full border-2 border-[#24242f]"></span>
           </div>
           <h2 className="text-white mt-4 font-bold text-lg">Ashwath S</h2>
-          <p className="text-xs mt-1">Computer Science Engineer</p>
+          <p className="text-xs mt-1 text-gray-400">Computer Science Engineer</p>
         </div>
 
-        <div className="p-6 space-y-3 text-sm overflow-y-auto flex-1">
-          <p className='text-justify text-xs'>
+        <div className="p-6 space-y-6 text-sm overflow-y-auto flex-1 custom-scrollbar">
+          <p className="text-justify text-xs text-gray-400 leading-relaxed">
             I have a strong foundation in software application development and enjoy creating meaningful web applications.
           </p>
 
-          <hr className="border-gray-800 my-6" />
+          <hr className="border-gray-800" />
 
-          <div className="flex justify-around text-center py-4">
+          <div className="flex justify-around text-center py-1">
             <CircularSkill label="Kannada" percent={100} />
             <CircularSkill label="English" percent={90} />
             <CircularSkill label="Hindi" percent={70} />
           </div>
-          <hr className="border-gray-800 my-6" />
+
+          <hr className="border-gray-800" />
+
+
+          <div className="space-y-2 text-xs">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-400">Availability:</span>
+              <span className="text-green-400 font-medium bg-green-500/10 px-2 py-0.5 rounded text-[10px]">
+                Available for Hire
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-400">Completed Projects:</span>
+              <span className="text-yellow-400 font-medium">4+ Full-Stack</span>
+            </div>
+          </div>
+
+          <hr className="border-gray-800" />
+
+          <div className="pt-2">
+            <a
+              href="https://ashwathskulalportfolio.vercel.app//pdfs/Resume (Ashwath_S).pdf" download="RESUME_Ashwath_S.pdf"
+              className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#24242f] text-gray-400 hover:text-white border border-gray-800 hover:border-yellow-400 rounded transition-all duration-300 text-xs font-bold uppercase tracking-widest group"
+            >
+              <span>Download CV</span>
+              <Download size={14} className="text-gray-400 group-hover:text-yellow-400 group-hover:translate-y-0.5 transition-all" />
+            </a>
+          </div>
         </div>
 
-        <div className="bg-[#24242f] p-4 flex justify-around border-t border-gray-800">
-          <NavLink to="https://www.linkedin.com/in/ashwath-s-56a5b2334/" target='blank'><Linkedin size={16} className="hover:text-white cursor-pointer" /></NavLink>
-          <NavLink to="https://github.com/Ashwath-S-kulal" target='blank'><Github size={16} className="hover:text-white cursor-pointer" /></NavLink>
-          <NavLink to="mailto:ashwathkulal2004@gmail.com" target='blank'><Mail size={16} className="hover:text-white cursor-pointer" /></NavLink>
-          <NavLink to="https://wa.me/918431294514" target='blank'><FaWhatsapp size={16} className="hover:text-white cursor-pointer" /></NavLink>
+
+        <div className="bg-[#24242f] p-4 flex justify-around border-t border-gray-800 text-gray-400">
+          <NavLink to="https://www.linkedin.com/in/ashwath-s-56a5b2334/" target="_blank" rel="noreferrer">
+            <Linkedin size={16} className="hover:text-white transition-colors cursor-pointer" />
+          </NavLink>
+          <NavLink to="https://github.com/Ashwath-S-kulal" target="_blank" rel="noreferrer">
+            <Github size={16} className="hover:text-white transition-colors cursor-pointer" />
+          </NavLink>
+          <NavLink to="mailto:ashwathkulal2004@gmail.com" target="_blank" rel="noreferrer">
+            <Mail size={16} className="hover:text-white transition-colors cursor-pointer" />
+          </NavLink>
+          <NavLink to="https://wa.me/918431294514" target="_blank" rel="noreferrer">
+            <FaWhatsapp size={16} className="hover:text-white transition-colors cursor-pointer" />
+          </NavLink>
         </div>
       </aside>
 
@@ -176,7 +213,7 @@ const PortfolioDashboard = () => {
         </main>
         <About />
         <Skills />
-        <FreelanceProjects/>
+        <FreelanceProjects />
         <Projects />
         <Education />
         <Contact />

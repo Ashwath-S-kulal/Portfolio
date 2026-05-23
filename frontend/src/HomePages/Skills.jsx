@@ -29,7 +29,7 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="bg-[#1e1e28] p-6 md:p-12 shadow-2xl my-10 border border-gray-800/50">
+    <section id="skills" className="bg-[#1e1e28] p-6 md:p-12 shadow-2xl my-10 border border-gray-800/50 scroll-mt-16">
       <header className="border-b border-gray-800/80 bg-[#1e1e28]/40 sticky top-0 backdrop-blur-md z-40 pb-10">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>

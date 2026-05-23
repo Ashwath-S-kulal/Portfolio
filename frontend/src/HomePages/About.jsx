@@ -15,7 +15,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="bg-[#1e1e28] text-[#8c8c8e] px-8 py-16 scroll-mt-24 rounded-lg shadow-2xl">
+    <section id="about" className="bg-[#1e1e28] text-[#8c8c8e] px-8 py-16 scroll-mt-8 rounded-lg shadow-2xl">
       <header className="border-b border-gray-800/80 bg-[#1e1e28]/40 sticky top-0 backdrop-blur-md z-40 py-5">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div>
