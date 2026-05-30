@@ -108,7 +108,7 @@ const PortfolioDashboard = () => {
               href="https://ashwathskulalportfolio.vercel.app//pdfs/Resume (Ashwath_S).pdf" download="RESUME_Ashwath_S.pdf"
               className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#24242f] text-gray-400 hover:text-white border border-gray-800 hover:border-yellow-400 rounded transition-all duration-300 text-xs font-bold uppercase tracking-widest group"
             >
-              <span>Download CV</span>
+              <span>Download Resume</span>
               <Download size={14} className="text-gray-400 group-hover:text-yellow-400 group-hover:translate-y-0.5 transition-all" />
             </a>
           </div>

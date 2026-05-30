@@ -20,6 +20,12 @@ const skillGroups = [
     featured: false,
   },
   {
+    category: "Core CS Fundamentals",
+    description: "Theoretical foundations and systems engineering",
+    skills: ["DBMS", "Operating Systems (OS)", "Computer Networks (CN)", "Data Structures & Algorithms (DSA)"],
+    featured: false,
+  },
+  {
     category: "Tools & DevOps",
     description: "Deployment and version control",
     skills: ["Git", "GitHub", "Vercel", "Render", "Firebase", "Postman", "Brevo (SMTP)", "CI/CD Basics"],
