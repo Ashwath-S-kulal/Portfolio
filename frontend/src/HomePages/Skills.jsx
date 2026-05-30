@@ -8,10 +8,16 @@ const skillGroups = [
     featured: false,
   },
   {
+    category: "Core CS Fundamentals",
+    description: "Theoretical foundations and systems engineering",
+    skills: ["DBMS", "Operating Systems (OS)", "Computer Networks (CN)", "Data Structures & Algorithms (DSA)"],
+    featured: true,
+  },
+  {
     category: "Frontend Development",
     description: "Building responsive & interactive UIs",
     skills: ["React.js", "HTML", "CSS", "Tailwind CSS", "Redux Toolkit"],
-    featured: true,
+    featured: false,
   },
   {
     category: "Backend & Database",
@@ -20,16 +26,10 @@ const skillGroups = [
     featured: false,
   },
   {
-    category: "Core CS Fundamentals",
-    description: "Theoretical foundations and systems engineering",
-    skills: ["DBMS", "Operating Systems (OS)", "Computer Networks (CN)", "Data Structures & Algorithms (DSA)"],
-    featured: false,
-  },
-  {
     category: "Tools & DevOps",
     description: "Deployment and version control",
     skills: ["Git", "GitHub", "Vercel", "Render", "Firebase", "Postman", "Brevo (SMTP)", "CI/CD Basics"],
-    featured: true,
+    featured: false,
   },
 ];
 
