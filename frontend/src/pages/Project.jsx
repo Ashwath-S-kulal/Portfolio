@@ -16,17 +16,38 @@ import {
   ArrowLeft
 } from "lucide-react";
 
-import serviceMatePic1 from "../Images/Servicemate/Screenshot 2026-05-20 124911.png";
-import serviceMatePic2 from "../Images/Servicemate/Screenshot 2026-05-20 124835.png";
-import serviceMatePic3 from "../Images/Servicemate/Screenshot 2026-05-20 124821.png";
+import serviceMatePic1 from "../Images/Servicemate/1.png";
+import serviceMatePic2 from "../Images/Servicemate/2.png";
+import serviceMatePic3 from "../Images/Servicemate/3.png";
+import serviceMatePic4 from "../Images/Servicemate/4.png";
+import serviceMatePic5 from "../Images/Servicemate/5.png";
+import serviceMatePic6 from "../Images/Servicemate/6.png";
+import serviceMatePic7 from "../Images/Servicemate/7.png";
+import serviceMatePic8 from "../Images/Servicemate/8.png";
+import serviceMatePic9 from "../Images/Servicemate/9.png";
+import serviceMatePic10 from "../Images/Servicemate/10.png";
 
-import CRAPic1 from "../Images/CRA/Screenshot 2026-05-20 125446.png";
-import CRAPic2 from "../Images/CRA/Screenshot 2026-05-20 125422.png";
-import CRAPic3 from "../Images/CRA/Screenshot 2026-05-20 125359.png";
+import CRAPic1 from "../Images/CRA/1.png";
+import CRAPic2 from "../Images/CRA/2.png";
+import CRAPic3 from "../Images/CRA/3.png";
+import CRAPic4 from "../Images/CRA/4.png";
+import CRAPic5 from "../Images/CRA/5.png";
+import CRAPic6 from "../Images/CRA/6.png";
+import CRAPic7 from "../Images/CRA/7.png";
+import CRAPic8 from "../Images/CRA/8.png";
+import CRAPic9 from "../Images/CRA/9.png";
+import CRAPic10 from "../Images/CRA/10.png";
 
-import healthCarePic1 from "../Images/HealthCare/Screenshot 2026-05-20 125310.png";
-import healthCarePic2 from "../Images/HealthCare/Screenshot 2026-05-20 125118.png";
-import healthCarePic3 from "../Images/HealthCare/Screenshot 2026-05-20 125052.png";
+import healthCarePic1 from "../Images/HealthCare/1.png";
+import healthCarePic2 from "../Images/HealthCare/2.png";
+import healthCarePic3 from "../Images/HealthCare/3.png";
+import healthCarePic4 from "../Images/HealthCare/4.png";
+import healthCarePic5 from "../Images/HealthCare/5.png";
+import healthCarePic6 from "../Images/HealthCare/6.png";
+import healthCarePic7 from "../Images/HealthCare/7.png";
+import healthCarePic8 from "../Images/HealthCare/8.png";
+import healthCarePic9 from "../Images/HealthCare/9.png";
+import healthCarePic10 from "../Images/HealthCare/10.png";
 
 import mernAuthPic1 from "../Images/Auth/Screenshot 2026-05-20 125604.png";
 import mernAuthPic2 from "../Images/Auth/Screenshot 2026-05-20 125617.png";
@@ -39,6 +60,7 @@ import boatAdPic3 from "../Images/Boat/Screenshot 2026-05-20 125508.png";
 export default function Project() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [activeViewerImage, setActiveViewerImage] = useState("");
+  const [fullscreenImage, setFullscreenImage] = useState(null);
 
 
   useEffect(() => {
@@ -65,49 +87,49 @@ export default function Project() {
 
 
   const projects = [
-   {
-img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952",
-extraImages: [serviceMatePic3, serviceMatePic2, serviceMatePic1],
-title: "AI-Powered Local Service Booking Platform",
-category: "Full Stack Development",
-desc: "An AI-powered marketplace connecting users with trusted local service providers.",
-longDesc: "ServiceMate is a full-stack multi-role service marketplace that streamlines the process of discovering, booking, and managing local services. Users can leverage AI-assisted service recommendations, explore provider profiles with AI-generated summaries, schedule bookings, and track service progress in real time. Providers can manage multiple services, assign workers, and handle booking requests, while administrators oversee provider approvals, users, reviews, and platform operations through a comprehensive dashboard. Built with scalability, security, and real-world service workflows in mind, ServiceMate delivers a seamless experience for users, providers, and administrators.",
-techStack: [
-"React (Vite)",
-"Tailwind CSS",
-"Redux Toolkit",
-"Node.js",
-"Express.js",
-"MongoDB",
-"Cloudinary",
-"JWT",
-"Brevo",
-"Groq LLM",
-"Vercel"
-],
-features: [
-"User, Provider, and Admin role-based system",
-"OTP-based authentication using email",
-"AI-assisted service discovery and recommendations",
-"AI-generated provider summaries based on reviews and performance",
-"Integrated AI chatbot for service guidance and support",
-"Service browsing and booking with preferred date selection",
-"Provider approval and verification system by admin",
-"Providers can create and manage multiple services",
-"Booking accept/reject workflow with rejection reasons",
-"Worker assignment and real-time booking status updates",
-"Review and rating system after service completion",
-"Admin dashboard to manage users, providers, services, and reviews",
-"Cloudinary integration for media uploads",
-"Secure JWT-based authentication and authorization"
-],
-link: "https://servicemate-ashwathskulal.vercel.app/",
-GitLink: "https://github.com/Ashwath-S-kulal/MERN_INTERNSHIP_2026_ASHWATH_S",
-icon: <Briefcase size={18} />
-},
+    {
+      img: "https://images.unsplash.com/photo-1581578731548-c64695cc6952",
+      extraImages: [serviceMatePic1, serviceMatePic2, serviceMatePic3, serviceMatePic4, serviceMatePic5, serviceMatePic6, serviceMatePic7, serviceMatePic8, serviceMatePic9, serviceMatePic10],
+      title: "AI-Powered Local Service Booking Platform",
+      category: "Full Stack Development",
+      desc: "An AI-powered marketplace connecting users with trusted local service providers.",
+      longDesc: "ServiceMate is a full-stack multi-role service marketplace that streamlines the process of discovering, booking, and managing local services. Users can leverage AI-assisted service recommendations, explore provider profiles with AI-generated summaries, schedule bookings, and track service progress in real time. Providers can manage multiple services, assign workers, and handle booking requests, while administrators oversee provider approvals, users, reviews, and platform operations through a comprehensive dashboard. Built with scalability, security, and real-world service workflows in mind, ServiceMate delivers a seamless experience for users, providers, and administrators.",
+      techStack: [
+        "React (Vite)",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Cloudinary",
+        "JWT",
+        "Brevo",
+        "Groq LLM",
+        "Vercel"
+      ],
+      features: [
+        "User, Provider, and Admin role-based system",
+        "OTP-based authentication using email",
+        "AI-assisted service discovery and recommendations",
+        "AI-generated provider summaries based on reviews and performance",
+        "Integrated AI chatbot for service guidance and support",
+        "Service browsing and booking with preferred date selection",
+        "Provider approval and verification system by admin",
+        "Providers can create and manage multiple services",
+        "Booking accept/reject workflow with rejection reasons",
+        "Worker assignment and real-time booking status updates",
+        "Review and rating system after service completion",
+        "Admin dashboard to manage users, providers, services, and reviews",
+        "Cloudinary integration for media uploads",
+        "Secure JWT-based authentication and authorization"
+      ],
+      link: "https://servicemate-as.vercel.app/",
+      GitLink: "https://github.com/Ashwath-S-kulal/MERN_INTERNSHIP_2026_ASHWATH_S",
+      icon: <Briefcase size={18} />
+    },
     {
       img: "https://content.wotr.org/climate-resilient-agriculture/assets/0Y7zHIZCHJ/c0923_compressed_frame-0ms-720x405.jpg",
-      extraImages: [CRAPic1, CRAPic2, CRAPic3],
+      extraImages: [CRAPic1, CRAPic2, CRAPic3, CRAPic4, CRAPic5, CRAPic6, CRAPic7, CRAPic8, CRAPic9, CRAPic10],
       title: "Climate Resilient Agriculture Using Machine Learning",
       category: "Full Stack Development & AI",
       desc: "An AI-powered decision support platform that helps farmers make climate-smart agricultural decisions using predictive analytics, weather intelligence, and crop monitoring.",
@@ -143,13 +165,13 @@ icon: <Briefcase size={18} />
         "Secure JWT Authentication",
         "Real-time Profile Management"
       ],
-      link: "https://climate-resilient-agriculture.onrender.com/",
-      GitLink: "https://github.com/Ashwath-S-kulal/Climate-Resilient-Agriculture",
+      link: "https://smartagri-as.vercel.app/",
+      GitLink: "https://github.com/Ashwath-S-kulal/AI-Powered-Climate-Based-Agriculture-Platform",
       icon: <Leaf size={18} />
     },
     {
       img: "https://www.idfy.com/wp-content/uploads/2021/05/Healthcare-BGV-scaled.jpg",
-      extraImages: [healthCarePic3, healthCarePic1, healthCarePic2],
+      extraImages: [healthCarePic1, healthCarePic2, healthCarePic3, healthCarePic4, healthCarePic5, healthCarePic6, healthCarePic7, healthCarePic8, healthCarePic9, healthCarePic10],
       title: "Smart Healthcare Assistance Platform",
       category: "Full Stack Development",
       desc: "An AI-powered healthcare ecosystem that helps users discover medical services, manage diseases, access medicine information, and receive personalized health guidance.",
@@ -184,8 +206,8 @@ icon: <Briefcase size={18} />
         "Responsive Admin Dashboard",
         "Mobile-Friendly Responsive Design"
       ],
-      link: "https://health-bridge-medical-website.vercel.app/",
-      GitLink: "https://github.com/Ashwath-S-kulal/Health-Bridge-Medical-Website",
+      link: "https://healthcare-as.vercel.app/",
+      GitLink: "https://github.com/Ashwath-S-kulal/HealthCare-Medical-Website",
       icon: <HeartPulse size={18} />
     },
     {
@@ -340,17 +362,19 @@ icon: <Briefcase size={18} />
 
             <div className="flex flex-col lg:flex-row gap-12 items-start">
               <div className="w-full lg:w-[45%] space-y-4 lg:sticky lg:top-[100px]">
-                <div className="relative rounded-sm overflow-hidden border border-gray-800 bg-[#1e1e28] shadow-2xl transition-all duration-300">
+                <div
+                  className="relative rounded-sm overflow-hidden border border-gray-800 bg-[#1e1e28] shadow-2xl cursor-zoom-in"
+                  onClick={() => setFullscreenImage(activeViewerImage)} // Add this
+                >
                   <img
                     src={activeViewerImage}
                     alt="Active Snapshot View"
                     className="w-full h-auto object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#14141b]/40 to-transparent"></div>
                 </div>
 
-                <div className="grid grid-cols-3 gap-3">
-                  {selectedProject.extraImages && selectedProject.extraImages.slice(0, 3).map((screenshot, idx) => (
+                <div className="grid grid-cols-5 gap-3">
+                  {selectedProject.extraImages && selectedProject.extraImages.slice(0, 10).map((screenshot, idx) => (
                     <div
                       key={idx}
                       onClick={() => setActiveViewerImage(screenshot)}
@@ -433,6 +457,19 @@ icon: <Briefcase size={18} />
               </div>
             </div>
           </div>
+        </div>
+      )}
+
+      {fullscreenImage && (
+        <div
+          className="fixed inset-0 z-[10000] bg-black/95 flex items-center justify-center cursor-zoom-out p-4 animate-in fade-in duration-200"
+          onClick={() => setFullscreenImage(null)}
+        >
+          <img
+            src={fullscreenImage}
+            alt="Full View"
+            className="max-w-full max-h-full object-contain shadow-2xl"
+          />
         </div>
       )}
     </div>
