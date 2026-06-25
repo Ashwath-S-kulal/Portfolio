@@ -8,7 +8,7 @@ export default function Education() {
       sub: 'Computer Science & Engineering',
       school: 'Shree Dharmasthala Manjunatheshwara Institute of Technology',
       location: 'Ujire, Dakshinakannada, Karnataka',
-      result: '8.52 CGPA',
+      result: '8.61 CGPA',
       period: '2022 — 2026',
       current: true,
     },
