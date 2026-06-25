@@ -32,19 +32,19 @@ const PortfolioDashboard = () => {
     {
       title: "AI-Powered Local Service Booking Platform",
       desc: "Multi-role service booking platform with admin and providers controls.",
-      link: "https://servicemate-ashwathskulal.vercel.app/",
+      link: "https://servicemate-as.vercel.app/",
       icon: <FaTools />,
     },
     {
       title: "AI powered Climate based Agriculture Platform",
       desc: "Data-driven climate monitoring system.",
-      link: "https://climate-resilient-agriculture.onrender.com",
+      link: "https://smartagri-as.vercel.app/",
       icon: <FaCloudSun />,
     },
     {
       title: "Smart Healthcare Assistance Platform",
       desc: "Patient management and portal system.",
-      link: "https://health-bridge-medical-website.vercel.app/",
+      link: "https://healthcare-as.vercel.app/",
       icon: <FaHeartbeat />,
     },
     {
