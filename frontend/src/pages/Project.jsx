@@ -130,7 +130,7 @@ export default function Project() {
     {
       img: "https://content.wotr.org/climate-resilient-agriculture/assets/0Y7zHIZCHJ/c0923_compressed_frame-0ms-720x405.jpg",
       extraImages: [CRAPic1, CRAPic2, CRAPic3, CRAPic4, CRAPic5, CRAPic6, CRAPic7, CRAPic8, CRAPic9, CRAPic10],
-      title: "Climate Resilient Agriculture Using Machine Learning",
+      title: "AI powered Climate based Agriculture Platform",
       category: "Full Stack Development & AI",
       desc: "An AI-powered decision support platform that helps farmers make climate-smart agricultural decisions using predictive analytics, weather intelligence, and crop monitoring.",
       longDesc: "Climate Resilient Agriculture is a comprehensive AI-driven platform designed to empower farmers with actionable insights for sustainable and profitable farming. The system integrates real-time weather intelligence, climate risk assessment, crop recommendations, soil analytics, disease detection, and conversational AI to help farmers adapt to changing environmental conditions. By combining machine learning, geospatial data, and agricultural expertise, the platform bridges the gap between climate science and practical farming operations.",
